@@ -1,0 +1,19 @@
+public class Funcionario extends Pessoa{
+  private String cargo;
+
+  public Funcionario(String nome, String endereco, String telefone, String cpf, String cargo){
+    super(nome, endereco, telefone);
+    this.cargo = cargo;
+  }
+
+  public String getCargo() {
+    return cargo;
+  }
+  public void setCargo(String cargo){
+    this.cargo = cargo;
+  }
+  public String imprimirDadosDaPessoa(){
+    return "\nO nome da pessoa é: " + getNome() + "\nseu telefone é: " + getTelefone() + "\nseu endereço é: " + getEndereco() + "\nseu cargo é: " + getCargo() + "\n";
+  }
+
+}
