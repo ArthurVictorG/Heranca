@@ -1,0 +1,35 @@
+public class Vendedor extends Empregado {
+  private double valorVendas;
+  private double comissao;
+
+  public Vendedor(String nome, String endereco, String telefone, int codigoSetor, double salarioBase, double imposto,double valorVendas, double comissao) {
+    super(nome, endereco, telefone, codigoSetor, salarioBase, imposto);
+    this.valorVendas = valorVendas;
+    this.comissao = comissao;
+  }
+
+  public double getValorVendas() {
+    return valorVendas;
+  }
+
+  public void setValorVendas(double valorVendas) {
+    this.valorVendas = valorVendas;
+  }
+
+  public double getComissao() {
+    return comissao;
+  }
+
+  public void setComissao(int comissao) {
+    this.comissao = comissao;
+  }
+  //metodo para calcular o salario líquido
+  public double calcularSalario(){
+    return super.calcularSalario() + (valorVendas * (comissao/100));
+  }
+
+  String imprimirDadosDaPessoa(){
+    return "\nO nome da pessoa é: " + getNome()  + "\nSeu telefone é: " + getTelefone() + "\nSeu endereço é: " + getEndereco() + "\nSeu código de setor é: " + getCodigoSetor() + "\nSeu salário base é: " + getSalarioBase() + "\nO imposto é: " + getImposto() + "%" + "\nValor das vendas: " + getValorVendas() + "\nA comissão é: " + getComissao() + "%" + "\nSeu salário liquido é: " + calcularSalario();
+
+  }
+}
