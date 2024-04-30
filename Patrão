@@ -1,0 +1,21 @@
+import org.hamcrest.StringDescription;
+
+public class Patrao extends Pessoa{
+  private String cpf;
+  
+  public Patrao(String nome, String endereco, String telefone, String cpf){
+    super(nome, endereco, telefone);
+    this.cpf = cpf;
+  }
+
+  public String getCpf() {
+    return cpf;
+  }
+  public void setCpf(String cpf){
+    this.cpf = cpf;
+  }
+
+  public String imprimirDadosDaPessoa(){
+    return "O nome da pessoa é: " + getNome() + "\nseu telefone é: " + getTelefone() + "\nseu endereço é: " + getEndereco() + "\nseu cpf é: " + getCpf();
+  }
+}
